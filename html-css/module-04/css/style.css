@@ -9,7 +9,7 @@ html {
 }
 
 .wrapper {
-    width: 1174px;
+    width: 1110px;
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
     padding-bottom: 80px;
@@ -20,6 +20,7 @@ html {
     display: table;
     clear: both;
 }
+
 /*
 * {
     outline: 1px solid red;
@@ -32,17 +33,18 @@ Img {
 }
 
 /* header */
+.main-nav {
+    float: right;
+}
 
 .menu {
-    float: right;
-    width: 476px;
     list-style: none;
     font-size: 14px;
     line-height: 11px;
     padding: 0;
     margin: 0;
     margin-top: 8px;
-    padding-left: 10px;
+
 
 }
 
@@ -60,10 +62,7 @@ Img {
 
 
 .logo {
-    float: left;
-    width: 110px;
-    padding-left: 30px;
-
+    display: block;
     font-weight: 300;
     text-transform: uppercase;
     text-decoration: none;
@@ -79,7 +78,7 @@ Img {
 }
 
 .menu .link {
-
+    display: block;
     text-decoration: none;
     text-transform: uppercase;
     color: #0f0101;
@@ -87,7 +86,7 @@ Img {
     font-weight: 700;
     line-height: 11px;
     font-size: 14px;
-    float: left;
+
 }
 
 .menu .link:hover {
@@ -110,12 +109,8 @@ Img {
 /* section 1 */
 
 .menu-featured {
-    width: 1110px;
     list-style: none;
     margin: 0;
-    margin-top: 92px;
-    margin-left: 30px;
-    margin-right: 30px;
     padding: 0;
 }
 
@@ -123,18 +118,23 @@ Img {
     margin-right: 0;
 }
 
-.menu-featured li:hover .name p {
-background-color: #1abc9c;
+.menu-featured li:hover .box-name {
+    background-color: #1abc9c;
 }
-.menu-featured li:hover .little p {
+
+.menu-featured li:hover .box-price {
     background-color: #7fd9c7;
+}
+
+.products {
+    padding-top: 120px;
+    margin-bottom: 100px;
 }
 
 .section-title {
     text-align: center;
     margin: 0;
-    margin-top: 102px;
-
+    margin-bottom: 92px;
     font-size: 48px;
     line-height: 57.6px;
     text-transform: uppercase;
@@ -159,27 +159,26 @@ background-color: #1abc9c;
     text-align: center;
     color: #ffffff;
     font-weight: 700;
-    
+
 }
 
-.box .name {
+.box-name {
+    float: left;
     width: 200px;
     height: 40px;
-    background-color: #323232;    
+    background-color: #323232;
     margin: 0;
 }
 
-.box .price {
+.box-price {
     float: left;
     width: 55px;
     height: 40px;
     background-color: #8c8c8c;
+   margin: 0;
 }
 
 
-.picture {
-    margin: 0;
-}
 
 .price {
     margin: 0;
@@ -188,13 +187,14 @@ background-color: #1abc9c;
 .list-item {
     float: left;
     width: 255px;
-    margin-right: 30px;  
+    margin-right: 30px;
 }
 
 
 .list-item:nth-child(-n+4) {
     margin-bottom: 30px;
 }
+
 .product-link {
     float: left;
 }
@@ -204,41 +204,39 @@ background-color: #1abc9c;
 
 .menu-news {
     list-style: none;
-    margin: 0;
-   margin-right: 30px;
-   margin-left: 30px;
+    margin: 0;  
     padding: 0;
-    margin-top: 80px;
+ 
 }
-.menu-news {
 
-}
+
 .menu-news .image {
     margin: 0;
     margin-bottom: 11px;
-  
+
 }
 
 .menu-news .heading {
-  margin: 0;
-  margin-bottom: 6px;
-    font-family: 'Open Sans', sans-serif;  
+    margin: 0;
+    margin-bottom: 6px;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     line-height: 26px;
     color: #555252;
- }
+}
 
 .menu-news .text::before {
     display: block;
     width: 138px;
     height: 3px;
     background-color: #4ec6ab;
-    content:'';
+    content: '';
     margin-bottom: 23px;
 }
+
 .menu-news .text {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;  
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     color: #555252;
     font-size: 14px;
@@ -249,13 +247,16 @@ background-color: #1abc9c;
 .menu-news .link-news {
     float: left;
 }
+
 .news-item {
-    float:left;
+    float: left;
     width: 350px;
-    }
-.news-item:not(:last-child) {
-    margin-right: 30px; 
 }
+
+.news-item:not(:last-child) {
+    margin-right: 30px;
+}
+
 /*.news-item .click  {
     font-weight: 300;
     font-size: 16px;
@@ -266,18 +267,17 @@ background-color: #1abc9c;
     margin: 0 auto;
     cursor: pointer;
 }*/
-.news-item .click a {
-     display: block;
-text-decoration: none;
-color:#ffffff;
-background-color: #4ec6ab;
-font-weight: 300;
-font-size: 16px;
-line-height: 50px;
-height: 50px;
-width: 160px;
-padding: 0;
-margin: 0 auto;
-cursor: pointer;
-text-align: center;
+.button {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #4ec6ab;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 50px;
+    height: 50px;
+    width: 160px;
+    padding: 0;
+    cursor: pointer;
+    text-align: center;
 }
